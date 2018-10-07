@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    cout << "start convert nv12 file to jpg file" << endl;
+    cout << "start convert nv12 file to bmp file" << endl;
 
     // set source file and new file path
     string file_path = "/Users/zhouxi/CLionProjects/DJICameraVideoToPictureProject/cmake-build-debug/raw_out.raw";
