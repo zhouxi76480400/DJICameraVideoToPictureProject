@@ -44,6 +44,7 @@ int convert_nv12_to_bmp(int width_pixel, int height_pixel, string nv12_path, str
                 out_stream.close();
                 delete [] bgrbuffer;
                 delete [] bmp_header_buffer;
+                cout << "output file size: " << Bmp_Info_Size + Bmp_FileHeader_Size + bgr_size << endl;
                 status = convert_nv_12_to_bmp_status_success;
             }else{
                 status = convert_nv_12_to_bmp_status_failed;
