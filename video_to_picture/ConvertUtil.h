@@ -18,7 +18,7 @@ void convertNV12ToYV12(uint8_t * nv12bytes, uint8_t * i420bytes, int width, int 
 
 bool convertYV12ToBGR24_Table(uint8_t * pYUV, uint8_t * pBGR24,int width,int height);
 
-uint8_t * createBMPHeader(int width ,int height, int bgr_size);
+void createBMPHeader(uint8_t * header, int width ,int height, int bgr_size);
 
 
 #endif //DJICAMERAVIDEOTOPICTUREPROJECT_CONVERTUTIL_H

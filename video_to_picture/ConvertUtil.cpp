@@ -73,11 +73,10 @@ void Symmetric(uint8_t * img,uint8_t * data,int lineSize,int h) {
     }
 }
 
-uint8_t * createBMPHeader(int width ,int height, int bgr_size){
+void createBMPHeader(uint8_t * header, int width ,int height, int bgr_size) {
     int head_size = Bmp_FileHeader_Size + Bmp_Info_Size;
     int file_size = bgr_size + head_size;
     int file_size2 = bgr_size;
-    uint8_t * header = new uint8_t [sizeof(Bmp_FileHeader_Size + Bmp_FileHeader_Size)];
     int count = 0;
     header[count++] = 'B';
     header[count++] = 'M';
@@ -133,5 +132,4 @@ uint8_t * createBMPHeader(int width ,int height, int bgr_size){
     header[count++] = 0;
     header[count++] = 0;
     header[count++] = 0;
-    return header;
 }
