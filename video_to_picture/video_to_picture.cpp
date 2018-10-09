@@ -68,7 +68,7 @@ int convert_nv12_to_bmp_buffer(int width_pixel, int height_pixel, char * in_buff
         if(isSuccessToConvertBGR) {
             delete [] yv12buffer;
             yv12buffer = NULL;
-            char * bmp_header_buffer = (char *)malloc(Bmp_FileHeader_Size + Bmp_FileHeader_Size + bgr_size);// fix a problem with linux buffer overflow
+            char * bmp_header_buffer = (char *)malloc(Bmp_FileHeader_Size + Bmp_FileHeader_Size + bgr_size + 100);// fix a problem with linux buffer overflow
             memcat(bmp_header_buffer,Bmp_FileHeader_Size + Bmp_Info_Size,bgrbuffer,bgr_size);
             createBMPHeader((uint8_t *)bmp_header_buffer,width_pixel,height_pixel,bgr_size);
             memcpy(out_buffer,bmp_header_buffer,Bmp_Info_Size+Bmp_FileHeader_Size+bgr_size);
